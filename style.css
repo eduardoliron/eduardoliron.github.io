@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:700');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+   width: 100%;
+   height: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, .box span {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, .box span {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+
+h1 {
+  font-size: 5em;
+  border-top: 3px solid #000;
+  padding-top: 45px;
+}
+
+h2 {
+  font-size: 3em;
+  margin-left: -0.2em;
+}
+
+h3 {
+  font-size: 0.7em;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 3em;
+}
+
+ul {
+  margin-top: 45px;
+  padding: 0 0 0 1em;
+}
+
+li {
+  display: block;
+  margin-bottom: 1em;
+}
+
+li a, li a:visited {
+  color: #999;
+}
+
+li a:hover {
+  color: #000;
+}
+
+a, a:visited {
+  color: #222;
+  filter: opacity(0.85);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  filter: opacity(1);
+}
+
+section {
+  width: 40%;
+  height: 100%;
+  float: right;
+  overflow: scroll;
+  padding: 2%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr repeat(3, minmax(10rem, 10fr));
+  grid-template-rows: auto [last-line];
+  height: 100%;
+}
+
+.box {
+  position: relative;
+  margin-top: 15px;
+}
+
+.box:nth-child(even) {
+  grid-column: span 1;
+  font-size: 1em;
+  border-right: 1px solid black;
+}
+
+.box:nth-child(odd){
+    grid-column: span 3;
+}
+
+.box:nth-child(1) {
+  grid-column: 1 / span 1;
+  grid-row: 1 / 9000;
+}
+
+.box span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 30px 10px 10px 0px;
+}
+
+.sub-box {
+  height: 600px;
+  overflow: hidden;
+  display: block;
+}
+
+.imagem {
+  width: 60%;
+  height: 100%;
+  float: left;
+  background-image: url("http://i.stack.imgur.com/2OrtT.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.reduced {
+  float: left;
+  height: 600px;
+  overflow: hidden;
+  display: block;
+}
+
+.reduced .imagem {
+  height: 50%;
+  width: 100%;
+  float: none;
+}
+
+.reduced section {
+  height: 50%;
+  width: 100%;
+  float: none;
+}
+
+.reduced h2 {
+  font-size: 1.5em;
+}
+
+.medium {
+    width: calc(100% / 4);
+}
+
+.small {
+    width: calc(100% / 6);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
