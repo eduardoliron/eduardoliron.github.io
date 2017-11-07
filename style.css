@@ -3,6 +3,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  text-align: justify;
 }
 
 html, body {
@@ -43,21 +44,21 @@ h3 {
   margin-bottom: 3em;
 }
 
-ul {
+.anchor-links {
   margin-top: 45px;
   padding: 0 0 0 1em;
 }
 
-li {
+.anchor-links li {
   display: block;
   margin-bottom: 1em;
 }
 
-li a, li a:visited {
+.anchor-links li a, li a:visited {
   color: #999;
 }
 
-li a:hover {
+.anchor-links li a:hover {
   color: #000;
 }
 
