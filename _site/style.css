@@ -177,7 +177,7 @@ section {
 
 @media (max-width: 1921px) {
   section {
-    width: 65%;
+    width: 45%;
     height: 100%;
     float: right;
     overflow: scroll;
@@ -185,7 +185,7 @@ section {
   }
 
   .imagem {
-    width: 35%;
+    width: 55%;
   }
 
   .small {
@@ -196,6 +196,33 @@ section {
       width: calc(100% / 2);
   }
 }
+
+@media (max-width: 1500px) {
+  section {
+    width: 55%;
+    height: 100%;
+    float: right;
+    overflow: scroll;
+    padding: 15px;
+  }
+
+  .imagem {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1250px) {
+  section {
+    width: 65%;
+    height: 100%;
+    float: right;
+    overflow: scroll;
+    padding: 15px;
+  }
+
+  .imagem {
+    width: 35%;
+  }
 
 @media (max-width: 900px) {
   .container {
