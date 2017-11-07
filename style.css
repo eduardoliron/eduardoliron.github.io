@@ -26,8 +26,13 @@ h1, .box span {
   writing-mode: vertical-rl;
 }
 
+h1 em{
+  display:block;
+  font-style:normal;
+}
+
 h1 {
-  font-size: 5em;
+  font-size: 3em;
   border-top: 3px solid #000;
   padding-top: 45px;
 }
@@ -78,12 +83,12 @@ section {
   height: 100%;
   float: right;
   overflow: scroll;
-  padding: 2%;
+  padding: 15px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr repeat(3, minmax(10rem, 10fr));
+  grid-template-columns: minmax(8rem, 5fr) 1fr repeat(3, minmax(10rem, 25fr));
   grid-template-rows: auto [last-line];
   height: 100%;
 }
@@ -168,4 +173,105 @@ section {
   position: fixed;
   top: 0;
   z-index: 99;
+}
+
+@media (max-width: 1921px) {
+  section {
+    width: 65%;
+    height: 100%;
+    float: right;
+    overflow: scroll;
+    padding: 15px;
+  }
+
+  .imagem {
+    width: 35%;
+  }
+
+  .small {
+    width: calc(100% / 3);
+  }
+
+  .medium {
+      width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 30px 1fr;
+  }
+
+  .box:nth-child(odd){
+      grid-column: 2 / span 2;
+  }
+
+  .box:nth-child(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+
+  h1 {
+    border-top: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    transform: none;
+    writing-mode: unset;
+  }
+
+  h1 em {
+    display: inline;
+  }
+  .anchor-links {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .anchor-links li {
+    display: inline-block;
+    margin: 0.5em;
+  }
+
+  .sticky {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .imagem {
+    height: 50%;
+    width: 100%;
+    float: none;
+  }
+
+  section {
+    height: 50%;
+    width: 100%;
+    float: none;
+  }
+
+  .small {
+    width: calc(100% / 2);
+  }
+
+}
+
+@media (max-width: 500px) {
+  h1 {font-size: 2.5em;}
+  h2, .reduced h2{
+    font-size: 1em;
+  }
+
+  .anchor-links li{
+    margin: 0.2em;
+  }
+
+  .anchor-links li a {
+    font-size: 0.7em;
+  }
+
+  .small, .medium, .large{
+    width: 100%;
+  }
 }
