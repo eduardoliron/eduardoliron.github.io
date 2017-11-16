@@ -29,3 +29,24 @@ $('.anchor-menu').click(function (event){
       scrollTop: $(event['target']['hash']).offset().top
   }, 2000);
 });
+
+$(".followMe").each(function(i) {
+
+    var thiselement = $(this);
+    var fixTop = $(this).offset().top;
+    var endScroll = fixTop + $(this).parent().height() - $(this).height() - 40;
+
+    $(window).scroll(function() {
+        var currentScroll = $(window).scrollTop();
+        if (currentScroll >= fixTop && currentScroll <= endScroll){
+            thiselement.addClass("fixed");
+            thiselement.removeClass("fixend");
+        }
+        else if (currentScroll >= fixTop) {
+            thiselement.removeClass("fixed");
+            thiselement.addClass("fixend");
+        } else {
+            thiselement.removeClass("fixed");
+        }
+    });
+});
