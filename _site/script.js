@@ -50,3 +50,11 @@ $(".followMe").each(function(i) {
         }
     });
 });
+
+$('.name').on("mouseover", function() {
+  $('.info').slideDown();
+});
+
+$('.box').on("mouseenter", function() {
+  $('.info').slideUp();
+});
